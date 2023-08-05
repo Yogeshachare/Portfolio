@@ -1,0 +1,19 @@
+.motion__section {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 0;
+}
+
+.hash-span {
+  margin-top: -100px;
+  padding-bottom: 100px;
+  display: block;
+}
+@media (min-width: 640px) {
+  .motion__section {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}

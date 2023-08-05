@@ -1,0 +1,19 @@
+.about__tech {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10;
+}
+
+.about__tech-ball {
+  width: 7rem;
+  height: 7rem;
+}
+
+@media screen and (max-width: 450px) {
+  .about__tech-ball {
+    width: 4rem;
+    height: 4rem;
+  }
+}

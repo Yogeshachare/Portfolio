@@ -1,0 +1,88 @@
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.custom__button-blue {
+  background-color: var(--color-lightBlue);
+  color: var(--color-main);
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 0.1rem solid var(--color-lightBlue);
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.custom__button-blue::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--color-main);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.custom__button-blue:hover::before {
+  width: 100%;
+}
+
+.custom__button-blue:hover {
+  color: var(--color-lightBlue);
+}
+
+.section__padding {
+  padding: 4rem 6rem;
+}
+
+@media screen and (max-width: 1050px) {
+  .section__padding {
+    padding: 4rem 2rem;
+  }
+  .custom__button-blue {
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .custom__button-blue {
+    padding: 0.5rem 1rem;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .custom__button-blue {
+    padding: 0.4rem 1rem;
+    font-size: 14px;
+  }
+}
